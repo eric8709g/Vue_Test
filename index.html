@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>JS Bin</title>
+</head>
+<body>
+  <div class="app">
+    <input type="text" v-model="NT" @keyup.enter="rate">
+    <ul>
+      <li>
+        日幣 : {{JPY}}
+      </li>
+      <li>
+        美金 : {{USD}}
+      </li>
+    </ul>
+  </div>
+  
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.0.3/vue.js"></script>
+
+<script id="jsbin-javascript">
+var app = new Vue({
+  el:".app",
+  data: {
+    NT:0,
+    JPY:0,
+    USD:0
+  },
+  methods:{
+    rate(){
+      this.JPY = this.NT/0.2762;
+      this.USD = this.NT/30.332;
+    }
+  }
+})
+</script>
+
+
+
+<script id="jsbin-source-javascript" type="text/javascript">var app = new Vue({
+  el:".app",
+  data: {
+    NT:0,
+    JPY:0,
+    USD:0
+  },
+  methods:{
+    rate(){
+      this.JPY = this.NT/0.2762;
+      this.USD = this.NT/30.332;
+    }
+  }
+})</script></body>
+</html>
